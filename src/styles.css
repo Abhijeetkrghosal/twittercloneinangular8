@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* You can add global styles to this file, and also import other style files */
+
+body,html{
+	height:100%;
+  overflow-x:hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul.follow-list {
+  margin: 0px;
+  padding: 0px;
+  background: #3f4c6b;
+  width: 100%;
+  }
+
+  ul.follow-list li {
+  width: 25%;
+  float: left;
+  list-style: none;
+  padding: 8px 0px;
+  background: #111F28;
+  }
+
+  ul.follow-list li a {
+  padding: 2px 14px;
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  border-right: 1px solid #1C3544;
+
+  }

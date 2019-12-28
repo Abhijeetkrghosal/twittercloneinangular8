@@ -1,0 +1,57 @@
+<div class="main_section" >
+  <div class="container">
+<div class="row">
+<div class="col-sm-8">
+  <div class="card_title">
+
+    <span class="fa fa-search"></span>
+
+    <input type="textarea" class="my_search_input"
+    placeholder="Search your tweets......" [(ngModel)]="filterresult">
+  </div>
+  <div class="card">
+    <input type="textarea" class="form-control" placeholder="What's Happening!..." [(ngModel)]="noteTitle" (keyup.enter)= "addnotes()">
+    <div class="col-sm-12 text-center">
+      <button class="btn btn-info tweet_button" (click)="addnotes()">Tweet</button>
+
+  </div>
+    <div class="row">
+      <div class="col-sm-12" *ngFor="let note of notes | filter:filterresult" >
+
+        <div class="main_item">
+            <img src="../assets/mypic.png" alt="" class="profile_pic">
+            <div class="small_card">
+            <div class="full_left_part">
+       <div class="notes_name">
+          {{ note.title }} </div>
+          </div>
+          <div class="right_part">
+              <div class="remove_note"(click)="deleteRowData(note.id)">
+                <i class="fa fa-trash close_icon" aria-hidden="true"></i>
+
+                 </div>
+              <!-- <div class="remove_note"(click)="edittweet(note.id)">
+                <i class="fa fa-trash close_icon" aria-hidden="true"></i>
+
+                 </div> -->
+          </div>
+          <ul class="follow-list">
+            <li><a href="#"><i class="fa fa-heart"></i> 150</a></li>
+              <li><a href="#"><i class="fa fa-users"></i> 200</a></li>
+              <li><a href="#"><i class="fa fa-building-o"></i> 80</a></li>
+              <li><a href="#"><i class="fa fa-comments"></i> 120</a></li>
+          </ul>
+          </div>
+          </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+<div class="col-sm-4">
+  <app-trends></app-trends>
+</div>
+</div>
+</div>
+
+</div>
